@@ -2,7 +2,7 @@
 setwd("~/Documents/PROGRAMMING/Coursera/DS/assignments/EDA/week1")
 
 # file name
-file <- "household_power_consumption.txt"
+file <- "data/household_power_consumption.txt"
 
 # read data
 data <- read.table(file, header=TRUE, sep=";", stringsAsFactors=FALSE, dec=".")
@@ -21,7 +21,7 @@ data$subMetering2 <- as.numeric(data$Sub_metering_2)
 data$subMetering3 <- as.numeric(data$Sub_metering_3)
 
 # Plot 3 - 
-png("plot3x.png", width=480, height=480)
+png("plot3.png", width=480, height=480)
 plot(data$dateTime, data$subMetering1,
      type="l", 
      col="black",

@@ -21,7 +21,7 @@ data$subMetering2 <- as.numeric(data$Sub_metering_2)
 data$subMetering3 <- as.numeric(data$Sub_metering_3)
 
 # Plot 4
-png("plot4x.png", width=480, height=480)
+png("plot4.png", width=480, height=480)
 par(mfrow = c(2,2), mar=c(5.1,4.1,1.1,1.1), cex=0.7)
 
 # plot (1,1)

@@ -21,7 +21,7 @@ data$subMetering2 <- as.numeric(data$Sub_metering_2)
 data$subMetering3 <- as.numeric(data$Sub_metering_3)
 
 # Plot 2 - Line Graph of global active power over 2 days
-png("plot2x.png", width=480, height=480)
+png("plot2.png", width=480, height=480)
 plot(data$dateTime, data$globalActivePower, 
      type="l",
      xlab = "",
