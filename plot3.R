@@ -14,8 +14,6 @@ data <- data[data$Date %in% c("1/2/2007","2/2/2007") ,]
 data$dateTime <- strptime(paste(data$Date, data$Time, sep=" "), "%d/%m/%Y %H:%M:%S")
 
 # modify data format of selective folders
-data$globalActivePower <- as.numeric(data$Global_active_power)
-data$globalReactivePower <- as.numeric(data$Global_reactive_power)
 data$subMetering1 <- as.numeric(data$Sub_metering_1)
 data$subMetering2 <- as.numeric(data$Sub_metering_2)
 data$subMetering3 <- as.numeric(data$Sub_metering_3)

@@ -1,5 +1,5 @@
 # set working directory
-setwd("~/Documents/programming/coursera/DS/assignments/EDA/week1")
+# setwd("~/Documents/programming/coursera/DS/assignments/EDA/week1")
 
 # file name
 file <- "data/household_power_consumption.txt"
@@ -15,10 +15,6 @@ data$dateTime <- strptime(paste(data$Date, data$Time, sep=" "), "%d/%m/%Y %H:%M:
 
 # modify data format of selective folders
 data$globalActivePower <- as.numeric(data$Global_active_power)
-data$globalReactivePower <- as.numeric(data$Global_reactive_power)
-data$subMetering1 <- as.numeric(data$Sub_metering_1)
-data$subMetering2 <- as.numeric(data$Sub_metering_2)
-data$subMetering3 <- as.numeric(data$Sub_metering_3)
 
 # Plot 1 - Frequency histogram of global active power consumption
 png("plot1.png", width=480, height=480)

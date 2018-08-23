@@ -1,5 +1,5 @@
 # set working directory
-setwd("~/Documents/PROGRAMMING/Coursera/DS/assignments/EDA/week1")
+# setwd("~/Documents/PROGRAMMING/Coursera/DS/assignments/EDA/week1")
 
 # file name
 file <- "data/household_power_consumption.txt"
