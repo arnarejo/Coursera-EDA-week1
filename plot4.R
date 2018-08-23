@@ -2,7 +2,7 @@
 setwd("~/Documents/PROGRAMMING/Coursera/DS/assignments/EDA/week1")
 
 # file name
-file <- "household_power_consumption.txt"
+file <- "data/household_power_consumption.txt"
 
 # read data
 data <- read.table(file, header=TRUE, sep=";", stringsAsFactors=FALSE, dec=".")
@@ -20,44 +20,8 @@ data$subMetering1 <- as.numeric(data$Sub_metering_1)
 data$subMetering2 <- as.numeric(data$Sub_metering_2)
 data$subMetering3 <- as.numeric(data$Sub_metering_3)
 
-# Plot 1 - Frequency histogram of global active power consumption
-png("plot1.png", width=480, height=480)
-hist(data$globalActivePower, 
-     col="red", 
-     main = "Global Active Power", 
-     xlab = "Global Active Power (kilowatts)",
-     ylab = "Frequency")
-dev.off()
-
-# Plot 2 - Line Graph of global active power over 2 days
-png("plot2.png", width=480, height=480)
-plot(data$dateTime, data$globalActivePower, 
-     type="l",
-     xlab = "",
-     ylab="Global Active Power (kilowatts)")
-dev.off()
-
-# Plot 3 - 
-png("plot3.png", width=480, height=480)
-plot(data$dateTime, data$subMetering1,
-     type="l", 
-     col="black",
-     xlab="",
-     ylab="Energy sub metering")
-lines(data$dateTime, data$subMetering2, 
-      type="l",
-      col="red")
-lines(data$dateTime, data$subMetering3,
-      type="l",
-      col="blue")
-legend("topright", 
-       legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
-       col=c("black", "red", "blue"), 
-       lty=1, cex=0.8)
-dev.off()
-
 # Plot 4
-png("plot4.png", width=480, height=480)
+png("plot4x.png", width=480, height=480)
 par(mfrow = c(2,2), mar=c(5.1,4.1,1.1,1.1), cex=0.7)
 
 # plot (1,1)
